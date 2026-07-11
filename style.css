@@ -8,6 +8,10 @@
     height: 100rem;
 }
 .hr01{
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+.pp-img{
+    border-radius: 100%;
+    width: 100px;
 }

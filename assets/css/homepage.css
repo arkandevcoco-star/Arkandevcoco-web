@@ -1,0 +1,72 @@
+#welcome-text{
+    font-weight: 1000;
+    color: rgb(0, 68, 255);
+}
+
+.cl-blue{
+    background-color: rgb(0, 174, 255);
+}
+.cl-dark-blue{
+    background-color: rgb(197, 255, 252);
+}
+.p-100{
+    height: 40rem;
+}
+.hr01{
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+.pp-img{
+    border-radius: 100%;
+    width: 100px;
+}
+.area-sosialmedia{
+    background-color: rgb(0, 113, 206);
+    height: 100%;
+    padding: 100px;
+}
+/* biodata*/
+.section-title{
+    font-weight: 800;
+    color: rgb(49, 70, 253);
+}
+.biodata-section{
+    background-color: rgb(112, 197, 247);
+    padding: 2rem;
+    border-radius: 30px;
+}
+.biodata-item{
+    background-color: rgb(227, 244, 250);
+    padding: 20px 10px ;
+    border-radius: 20px;
+    border-left: 3px solid rgb(0, 113, 206);
+
+}
+.biodata-item:hover{
+    transform: translateY(-5px);
+}
+.biodata-label{
+    font-weight: 700;
+    color: #0084ff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.biodata-value{
+    color: #00a2ff;
+    font-weight: 400;
+}
+.biodata-value a{
+    text-decoration: none;
+    color: #00a2ff;
+    font-weight: 400;
+}
+/* sosmed*/
+.sosmed-section{
+    margin-top: 50px;
+    background-color: rgb(112, 197, 247);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+

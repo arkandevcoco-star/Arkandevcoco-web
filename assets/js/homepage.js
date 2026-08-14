@@ -1,29 +1,44 @@
-const tanggalLahir = new Date("2011-09-24T00:00:00");
+const texts = [
+    "Iman Bil Ghaibi, Taqwa bishidqin wa ikhlash",
+    "Suci Kang Kahesti, Luhur Kang Ginayuh, Gedhe Cobane, Akeh Pangorbanane, Rumpil Margane, Abot Sanggane, Adoh Jeru Lembut Kang Tinebo, Ning Sampurno Wusanane",
+    "Urip ndunyo iki ora angel, sak uger ukril yo gempil, sing angel tur abot kuwi nek ora mekoleh pitulungaNe Gusti Allah gelem sabar lan ikhlas merangi nefsu lan watak akune dewe-dewe.",
+    "Ngendi-ngendi sing abot mungguh nefsu, ya kuwi sing utomo",
+    "Kullu syai’in bilaa Huwa Bathilun"
+];
 
-function hitungUmur() {
-    const sekarang = new Date();
+const typingText = document.getElementById("dhawuh-guru");
 
-    let tahun = sekarang.getFullYear() - tanggalLahir.getFullYear();
-    let bulan = sekarang.getMonth() - tanggalLahir.getMonth();
-    let hari = sekarang.getDate() - tanggalLahir.getDate();
+let textIndex = 0;
+let charIndex = 0;
 
-    if (hari < 0) {
-        bulan--;
-        hari += new Date(
-            sekarang.getFullYear(),
-            sekarang.getMonth(),
-            0
-        ).getDate();
+function typeText() {
+    if (charIndex < texts[textIndex].length) {
+        typingText.textContent += texts[textIndex][charIndex];
+        charIndex++;
+
+        setTimeout(typeText, 100);
+    } else {
+        setTimeout(deleteText, 1500);
     }
-
-    if (bulan < 0) {
-        tahun--;
-        bulan += 12;
-    }
-
-    document.getElementById("umur").textContent =
-        `${tahun} Tahun ${bulan} Bulan ${hari} Hari`;
 }
 
-hitungUmur();            // Jalankan saat halaman dibuka
-setInterval(hitungUmur, 1000); // Update setiap detik
+function deleteText() {
+    if (charIndex > 0) {
+        typingText.textContent =
+            texts[textIndex].substring(0, charIndex - 1);
+
+        charIndex--;
+
+        setTimeout(deleteText, 5);
+    } else {
+        textIndex++;
+
+        if (textIndex >= texts.length) {
+            textIndex = 0;
+        }
+
+        setTimeout(typeText, 300);
+    }
+}
+
+typeText();

@@ -1,134 +1,121 @@
-#welcome-text{
-    font-weight: 1000;
-    color: rgb(0, 68, 255);
+/*HEADER*/
+body{
+    background-color: rgb(30, 32, 42);
+}
+header {
+    background-color: #0b0c10;
+    display: flex;
+    padding: 0px 20px;      
 }
 
-.cl-blue{
-    background-color: rgb(0, 174, 255);
+header h1 {
+    color: aliceblue;
+    margin: 0;                 
 }
-.cl-dark-blue{
-    background-color: rgb(197, 255, 252);
+.home-text{
+    max-width: 400px;
 }
-.p-100{
-    height: 40rem;
+.nav-menu {
+    margin-left: auto; 
+    display: flex;
+    gap: 2rem;          
+    justify-content: center;   
 }
-.hr01{
-    margin-left: 15rem;
-    margin-right: 15rem;
-}
-.pp-img{
-    border-radius: 100%;
-    width: 100px;
-}
-.area-sosialmedia{
-    background-color: rgb(0, 113, 206);
-    height: 100%;
-    padding: 100px;
-}
-/* biodata*/
-.section-title{
-    font-weight: 800;
-    color: rgb(255, 255, 255);
-}
-.biodata-section{
-    background-color: rgb(112, 197, 247);
-    padding: 2rem;
-    border-radius: 30px;
-}
-.biodata-item{
-    background-color: rgb(227, 244, 250);
-    padding: 20px 10px ;
-    border-radius: 20px;
-    border-left: 3px solid rgb(0, 113, 206);
 
+.nav-menu ul{
+    display: flex;
+    gap: 2rem;
 }
-.biodata-item:hover{
-    transform: translateY(-5px);
+
+.nav-menu a {
+    color: aliceblue;          
+    text-decoration: none;     
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav-menu a:hover {
+    color: #4000ff;
+}
+
+/* MAIN */
+
+/* HOMEEEEEE*/
+.home{
+    display: flex;
+    gap: 3rem;
+    color: azure;
+    padding: 3rem;
+}
+
+.home h1{
+    font-weight: 900;
+    color: rgb(98, 98, 228);
+}
+
+.profile{
+    border-radius: 2rem;
+}
+
+/* ABOUT */
+.about{
+    background-color: #0b0c10;
+    padding: 3rem;
+    color: azure;
+}
+.text-about{
+    max-width: 700px;
+}
+
+.biodata{
+    margin-bottom: 1rem;
+    background-color: #1d2f33;
+    border: #41b3ff solid ;
+    border-radius: 10px;
+    max-width: 500px;
+    
 }
 .biodata-label{
-    font-weight: 700;
-    color: #0084ff;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    padding-left: 1rem;
+    font-size: 20px;
+    font-weight: 800;
+    color: #00aaf9;
 }
 .biodata-value{
-    color: #00a2ff;
-    font-weight: 400;
-}
-.biodata-value a{
-    text-decoration: none;
-    color: #00a2ff;
-    font-weight: 400;
-}
-
-.social-section {
-        color: white;
-        padding: 80px 0;
-        text-align: center;
-    }
-
-.social-title {
-    font-size: 2.5rem;
+    padding-left: 1rem;
+    color: #305ef3;
     font-weight: 700;
-    margin-bottom: 30px;
 }
-
-.social-description {
-    font-size: 1.1rem;
-    opacity: 0.95;
-    margin-bottom: 40px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+/* FOOTER */
+footer{
+    color: azure;
 }
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.custom-footer {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-top: 1px solid #1e293b;
+    padding: 3rem 1.5rem;
 }
-
+.custom-footer h2 {
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
 .social-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 15px 35px;
-    border-radius: 50px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     text-decoration: none;
-    font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
-    border: 2px solid white;
+    gap: 8px;
 }
-
 .social-btn:hover {
-    background: white;
-    color: #00aeFF;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.social-icon {
-    width: 24px;
-    height: 24px;
-}
-
-
-
-.portfolio-section{
-    background-color: rgb(112, 197, 247);
-    padding: 2rem;
-    border-radius: 30px;
-}
-.btn-caffe{
-    background-color: rgb(0, 68, 255);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+    transform: translateY(-3px);
 }

@@ -161,9 +161,7 @@ header h1 {
     background-color: rgb(255, 72, 0);
 }
 .dhawuh{
-    border-top: #091975 solid;
-    border-bottom: #020827 solid;
-    background: linear-gradient(to top, #093f50, #020c1a);
+    background-color: #000103;
     h2{
         color: white;
     }

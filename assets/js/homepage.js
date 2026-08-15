@@ -6,14 +6,22 @@ const texts = [
     "Kullu syai’in bilaa Huwa Bathilun"
 ];
 
-const typingText = document.getElementById("dhawuh-guru");
+const texts2 = [
+    "Web Developer Junior",
+    "Godot Developer Junior",
+    "Roblox Studio Developer Junior",
+    "Flask Developer Junior",
+
+]
+/*============PERTAMA============*/ 
+const typingText1 = document.getElementById("dhawuh-guru");
 
 let textIndex = 0;
 let charIndex = 0;
 
 function typeText() {
     if (charIndex < texts[textIndex].length) {
-        typingText.textContent += texts[textIndex][charIndex];
+        typingText1.textContent += texts[textIndex][charIndex];
         charIndex++;
 
         setTimeout(typeText, 100);
@@ -24,7 +32,7 @@ function typeText() {
 
 function deleteText() {
     if (charIndex > 0) {
-        typingText.textContent =
+        typingText1.textContent =
             texts[textIndex].substring(0, charIndex - 1);
 
         charIndex--;
@@ -41,4 +49,49 @@ function deleteText() {
     }
 }
 
-typeText();
+/*============KEDUA============*/ 
+const typingText2 = document.getElementById("TypingText2");
+
+let textIndex2 = 0;
+let charIndex2 = 0;
+
+function typeText2() {
+    if (charIndex2 < texts2[textIndex2].length) {
+        typingText2.textContent += texts2[textIndex2][charIndex2];
+        charIndex2++;
+
+        setTimeout(typeText2, 100);
+    } else {
+        setTimeout(deleteText2, 1500);
+    }
+}
+
+function deleteText2() {
+    if (charIndex2 > 0) {
+        typingText2.textContent =
+            texts2[textIndex2].substring(0, charIndex2 - 1);
+
+        charIndex2--;
+
+        setTimeout(deleteText2, 5);
+    } else {
+        textIndex2++;
+
+        if (textIndex2 >= texts2.length) {
+            textIndex2 = 0;
+        }
+
+        setTimeout(typeText2, 300);
+    }
+}
+
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+typeText()
+typeText2();

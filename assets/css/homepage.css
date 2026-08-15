@@ -7,7 +7,8 @@ body{
 header {
     background-color: #0b0c10;
     display: flex;
-    padding: 0px 20px;      
+    padding: 0px 20px;    
+    position: fixed;  
 }
 
 header h1 {
@@ -44,6 +45,60 @@ header h1 {
     color: #14808f;
 }
 
+.menu-toggle {
+    display: none;
+}
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0b0c10;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+}
+
+    .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .nav-menu li {
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px;
+    }
+}
 /* MAIN */
 
 /* HOMEEEEEE*/
@@ -92,6 +147,11 @@ header h1 {
 }
 .text-about{
     max-width: 700px;
+}
+
+.typingtext2{
+    color: #00aaf9;
+    font-weight: 800;
 }
 
 .biodata{
